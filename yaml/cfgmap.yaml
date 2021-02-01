@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eks-saga-inventory
+  namespace: eks-saga
+data:
+  TZ: "timeZone"
+  REGION: "regionId"
+  DBHOST: "dbEndpoint"
+  DBPORT: "3306"
+  DBUSER: "pod_user"
+  DBNAME: "saga"
+  POLL_FREQUENCY: "20"
+  INPT_QUEUE_URL: "https://sqs.regionId.amazonaws.com/accountId/eks-saga-inventory-input"
+  SUCC_TOPIC_ARN: "arn:aws:sns:regionId:accountId:eks-saga-inventory-success"
+  FAIL_TOPIC_ARN: "arn:aws:sns:regionId:accountId:eks-saga-inventory-fail"

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: eks-saga
+  name: eks-saga-inventory
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: eks-saga-inventory
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: eks-saga-inventory
+    spec:
+      serviceAccountName: eks-saga
+      containers:
+        - name: eks-saga-inventory
+          image: accountId.dkr.ecr.regionId.amazonaws.com/eks-saga/inventory:0.0.0
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: eks-saga-inventory
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+              protocol: "TCP"
+      nodeSelector:
+        role: db

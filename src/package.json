@@ -1,0 +1,35 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "Inventory microservice for EKS Saga demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aws-samples/eks-saga-inventory.git"
+  },
+  "keywords": [
+    "kubernetes",
+    "microservices",
+    "saga",
+    "amazon-eks",
+    "aws-sns",
+    "aws-sqs",
+    "aws-rds",
+    "nodejs"
+  ],
+  "author": "Nagesh Subrahmanyam",
+  "license": "MIT-0",
+  "bugs": {
+    "url": "https://github.com/aws-samples/eks-saga-inventory/issues"
+  },
+  "homepage": "https://github.com/aws-samples/eks-saga-inventory#readme",
+  "dependencies": {
+    "aws-sdk": "^2.811.0",
+    "moment-timezone": "^0.5.32",
+    "mysql2": "^2.2.5",
+    "winston": "^3.3.3"
+  }
+}
