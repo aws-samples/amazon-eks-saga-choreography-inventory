@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/aws-samples/eks-saga-inventory#readme",
   "dependencies": {
-    "aws-sdk": "^2.811.0",
+    "aws-sdk": "^2.814.0",
     "moment-timezone": "^0.5.32",
     "mysql2": "^2.2.5",
     "winston": "^3.3.3"
